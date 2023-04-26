@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Helvetica Neue LT W05_35 Thin";
+  src: url("https://kashiwasato.com/new_assets_v3/fonts/7d63ccf8-e0ae-4dee-ad4d-bbc798aa5803.woff2") format("woff2"), url("https://kashiwasato.com/new_assets_v3/fonts/b2c1327f-ab3d-4230-93d7-eee8596e1498.woff") format("woff"); }
+
+@font-face {
+  font-family: "HelveticaNeueW01-45Ligh";
+  src: url("https://kashiwasato.com/new_assets_v3/fonts/5a13f7d1-b615-418e-bc3a-525001b9a671.woff2") format("woff2"), url("https://kashiwasato.com/new_assets_v3/fonts/530dee22-e3c1-4e9f-bf62-c31d510d9656.woff") format("woff"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT W05_55 Roman";
+  src: url("https://kashiwasato.com/new_assets_v3/fonts/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2") format("woff2"), url("https://kashiwasato.com/new_assets_v3/fonts/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff") format("woff"); }
+
+@font-face {
+  font-family: "HelveticaNeueW01-65Medi";
+  src: url("https://kashiwasato.com/new_assets_v3/fonts/3600b37f-2bf1-45f3-be3a-03365f16d9cb.woff2") format("woff2"), url("https://kashiwasato.com/new_assets_v3/fonts/60be5c39-863e-40cb-9434-6ebafb62ab2b.woff") format("woff"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT W05_75 Bold";
+  src: url("https://kashiwasato.com/new_assets_v3/fonts/800da3b0-675f-465f-892d-d76cecbdd5b1.woff2") format("woff2"), url("https://kashiwasato.com/new_assets_v3/fonts/7b415a05-784a-4a4c-8c94-67e9288312f5.woff") format("woff"); }
+  
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,10 +39,62 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Helvetica Neue LT W05_55 Roman", Helvetica, Arial, Verdana, "Noto Sans Japanese", "Noto Sans SC", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background: #FFF;
+}
+
+.ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.ellipsisLine {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.brightness{
+  filter: brightness(0.98);
+}
+.logoDesktop{
+  border-left: 34px solid #000;
+  padding-left: 26px;
+}
+.logoMobile{
+  border-left: 11px solid #000;
+  padding-left: 11px;
+}
+.logoText {
+  font-family: "HelveticaNeueW01-65Medi", Helvetica, Arial, Verdana, "Noto Sans Japanese", "Noto Sans SC", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+.logoDesc{
+  font-size: 10px;
+  transform: scale(0.8, 0.8);
+  line-height: 10px;
+  transform-origin: 0 16px;
+}
+.footer{
+  font-size: 10px;
+}
+.fontThin {
+  font-family: "HelveticaNeueW01-45Ligh", Helvetica, Arial, Verdana, "Noto Sans Japanese", "Noto Sans SC", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+.searchBtn {
+    background-image: url(https://kashiwasato.com/new_assets_v3/images/search.svg);
+    background-size: 12px 12px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.searchInput{
+  top: -8px;
+  right: -8px
+}
+.openMenu{
+  background-image: url(https://kashiwasato.com/new_assets_v3/images/menu_button_mobile.svg);
+  background-size: 27px 50px;
+  background-position: 0 -25px;
+  background-repeat: no-repeat;
+  height: 25px;
 }
